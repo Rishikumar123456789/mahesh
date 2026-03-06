@@ -1,5 +1,5 @@
 #-------------------------------stage 1 builds the image------------------------------------#
-FROM maven:3.9.9-eclips-tumerin-17 AS build 
+FROM maven:3.9.9-eclipse-temurin-17 AS build 
 #------creating the working directory inside the root folder------#
 WORKDIR /app
 #---------copying the pom.xml to /app folder-----------#
@@ -10,7 +10,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 #-----------stage 2 creating new Smaller image---------------#
-FROM  eclips-temurin:17-jdk-jammy
+ FROM eclipse-temurin:17-jdk-jammy
 #-------------create working directry-----------------#
 WORKDIR /app
 #-----------copying the jar file from build stage-------------#
