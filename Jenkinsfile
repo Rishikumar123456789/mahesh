@@ -2,8 +2,8 @@ pipeline {
     agent { label 'java-node' }
 
     tools {
-        jdk 'jdk17'
-        maven 'maven3'
+        jdk 'java17'
+        maven 'maven-3'
     }
 
     environment {
