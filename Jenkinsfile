@@ -55,7 +55,7 @@ pipeline {
                 sh '''
                 docker stop mahesh-container || true
                 docker rm mahesh-container || true
-                docker run -d -p 8081:8080 --name mahesh-container $IMAGE_NAME:$IMAGE_TAG
+                docker run -d -p 8081:8761 --name mahesh-container $IMAGE_NAME:$IMAGE_TAG
                 '''
             }
         }
